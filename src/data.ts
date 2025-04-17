@@ -7474,3 +7474,14 @@ export const testData = {
     },
   ],
 };
+
+const filteredWordDataRaw = testData.monologues
+  .map((monologue) => {
+    return monologue.elements;
+  })
+  .flat()
+  .filter((element) => {
+    return element.type === "text";
+  });
+
+export { filteredWordDataRaw };

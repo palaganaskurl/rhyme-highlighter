@@ -20,7 +20,28 @@ export type VideoItem = BaseItem & {
   src: string;
 };
 
-export type Item = SolidItem | TextItem | VideoItem;
+export type AudioItem = BaseItem & {
+  type: "audio";
+  src: string;
+};
+
+export type WordsWithTimestamps = {
+  word: string;
+  timestamp: number;
+  durationInFrames: number;
+};
+
+export type HighlightedVerses = BaseItem & {
+  type: "highlightedVerses";
+  wordsWithTimestamps: WordsWithTimestamps[];
+};
+
+export type Item =
+  | SolidItem
+  | TextItem
+  | VideoItem
+  | AudioItem
+  | HighlightedVerses;
 
 export type RemotionTrack = {
   name: string;
