@@ -38,7 +38,7 @@ function App() {
       items: [
         {
           type: "audio",
-          src: "/test.mp3",
+          src: "http://localhost:5173/test.mp3",
         } as Item,
       ],
     },
@@ -71,7 +71,7 @@ function App() {
           component={Main}
           fps={30}
           inputProps={inputProps}
-          durationInFrames={600}
+          durationInFrames={148 * FPS}
           compositionWidth={1080}
           compositionHeight={1920}
           controls
