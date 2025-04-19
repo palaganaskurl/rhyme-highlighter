@@ -37,12 +37,23 @@ export default function Timeline({ playerRef, lyrics }: TimelineProps) {
 
   const frame = useCurrentPlayerFrame(playerRef);
 
-  const timelineRef = useRef<HTMLDivElement>(null); // Ref for the timeline div
+  const timelineRef = useRef<HTMLDivElement>(null);
   const timelineWidth = totalDuration * timeLabelWidth;
 
-  // Calculate the marker's position based on the current frame
   const currentTime = frame / FPS; // Convert frame to seconds
   const markerPosition = (currentTime / totalDuration) * timelineWidth;
+
+  const handleTimelineClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!timelineRef.current || !playerRef.current) return;
+
+    const rect = timelineRef.current.getBoundingClientRect();
+    const clickX = e.clientX - rect.left; // Get the click position relative to the timeline
+    const newTime = (clickX / timelineWidth) * totalDuration; // Calculate the new time in seconds
+    const newFrame = Math.round(newTime * FPS); // Convert time to frames
+
+    // Update the player's current frame
+    playerRef.current.seekTo(newFrame);
+  };
 
   return (
     <div className="flex flex-row max-w-dvw h-[120px]">
@@ -57,7 +68,11 @@ export default function Timeline({ playerRef, lyrics }: TimelineProps) {
           </div>
         ))}
       </div>
-      <div className="border overflow-y-scroll w-3/4 relative">
+      <div
+        className="border overflow-y-scroll w-3/4 relative cursor-default"
+        onClick={handleTimelineClick}
+        ref={timelineRef}
+      >
         <div className="flex flex-row h-[30px]" id="timeSequence">
           {timeLabels.map((label, i) => (
             <div
@@ -74,7 +89,6 @@ export default function Timeline({ playerRef, lyrics }: TimelineProps) {
         <div
           id="timeline"
           className="relative w-full h-full"
-          ref={timelineRef}
           style={{
             maxWidth: timelineWidth,
           }}
