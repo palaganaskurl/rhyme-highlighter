@@ -25,10 +25,14 @@ function generateTimeSequence(interval: number, count: number): string[] {
 interface TimelineProps {
   playerRef: React.RefObject<PlayerRef | null>;
   lyrics: TimelineText[];
+  totalDuration: number;
 }
 
-export default function Timeline({ playerRef, lyrics }: TimelineProps) {
-  const totalDuration = 148; // This should be derived from the actual length of the audio.
+export default function Timeline({
+  playerRef,
+  lyrics,
+  totalDuration,
+}: TimelineProps) {
   const timeLabelWidth = 200;
 
   const interval = 1000; // 1 second

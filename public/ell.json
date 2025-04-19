@@ -1,0 +1,1665 @@
+{
+  "segments": [
+    {
+      "text": "[background music] Munemune sa maling akala. Guniguni parang namamalik mata. Sa tingin kaduda-duda ng magkatitigan. Siya ay hindi makuha-kuhan na palaisipan. Nalinlang sa ilusyong hiwaga niya na pambihira. Hibang sedilusyon, ikaw lang ang nakakakita. Nang 'yong lihim na ganda, itangi nila man yan, imposible. Gaya ng pinaniniwalaan, kalokohan lang na ang lahat wala rin. At ayoko sanang makawala ka pa sakin. Tanyang oo lamang ang kailangan. At pag-amin sapagkat katotohanan ang magpapalayas sa'tin. Para malinawang katangisip 'to. Tila kahit makabitaw sa panaginip, oh Diyos ko. Paliwalang ikaw nga raw ay hindi totoo. Isang balyo na naligaw sa may sarili kong mundo. Kaya tanong ko ay--",
+      "words": [
+        {
+          "text": "[background music]",
+          "start": 0.0,
+          "end": 0.099,
+          "type": "audio_event",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 0.099,
+          "end": 0.659,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "Muni-muni",
+          "start": 0.659,
+          "end": 1.999,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 1.999,
+          "end": 2.079,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "sa",
+          "start": 2.079,
+          "end": 2.42,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 2.42,
+          "end": 2.44,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "maling",
+          "start": 2.44,
+          "end": 2.939,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 2.939,
+          "end": 2.96,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "akala.",
+          "start": 2.96,
+          "end": 3.759,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 3.759,
+          "end": 3.939,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "Guni-guni",
+          "start": 3.939,
+          "end": 4.859,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 4.859,
+          "end": 4.92,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "parang",
+          "start": 4.92,
+          "end": 5.359,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 5.359,
+          "end": 5.38,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "namamalik",
+          "start": 5.38,
+          "end": 6.379,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 6.379,
+          "end": 6.399,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "mata.",
+          "start": 6.399,
+          "end": 6.859,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 6.859,
+          "end": 6.879,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "Sa",
+          "start": 6.879,
+          "end": 7.179,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 7.179,
+          "end": 7.419,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "tingin",
+          "start": 7.419,
+          "end": 7.799,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 7.799,
+          "end": 7.859,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "kaduda-duda",
+          "start": 7.859,
+          "end": 9.019,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 9.019,
+          "end": 9.019,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "nang",
+          "start": 9.019,
+          "end": 9.3,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 9.3,
+          "end": 9.319,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "magkatitigan.",
+          "start": 9.319,
+          "end": 10.699,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 10.699,
+          "end": 10.819,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "Siya",
+          "start": 10.819,
+          "end": 11.0,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 11.0,
+          "end": 11.119,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "ay",
+          "start": 11.119,
+          "end": 11.26,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 11.26,
+          "end": 11.3,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "hindi",
+          "start": 11.3,
+          "end": 11.779,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 11.779,
+          "end": 11.779,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "makuha-kuha",
+          "start": 11.779,
+          "end": 13.019,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 13.019,
+          "end": 13.019,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "na",
+          "start": 13.019,
+          "end": 13.159,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 13.159,
+          "end": 13.239,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "palaisipan.",
+          "start": 13.239,
+          "end": 14.659,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 14.659,
+          "end": 14.759,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "Nalinlang",
+          "start": 14.759,
+          "end": 15.64,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 15.64,
+          "end": 15.699,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "sa",
+          "start": 15.699,
+          "end": 15.939,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 15.939,
+          "end": 15.96,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "ilusyong",
+          "start": 15.96,
+          "end": 16.76,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 16.76,
+          "end": 16.779,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "hiwaga",
+          "start": 16.779,
+          "end": 17.359,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 17.359,
+          "end": 17.399,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "niya",
+          "start": 17.399,
+          "end": 17.699,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 17.699,
+          "end": 17.719,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "na",
+          "start": 17.719,
+          "end": 17.879,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 17.879,
+          "end": 17.94,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "pambihira.",
+          "start": 17.94,
+          "end": 18.899,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 18.899,
+          "end": 18.92,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "Hibang",
+          "start": 18.92,
+          "end": 19.62,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 19.62,
+          "end": 19.659,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "sedilusyon,",
+          "start": 19.659,
+          "end": 20.739,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 20.739,
+          "end": 20.739,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "ikaw",
+          "start": 20.739,
+          "end": 21.159,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 21.159,
+          "end": 21.159,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "lang",
+          "start": 21.159,
+          "end": 21.379,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 21.379,
+          "end": 21.379,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "ang",
+          "start": 21.379,
+          "end": 21.639,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 21.639,
+          "end": 21.639,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "nakakakita.",
+          "start": 21.639,
+          "end": 22.819,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 22.819,
+          "end": 22.84,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "Nang",
+          "start": 22.84,
+          "end": 23.059,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 23.059,
+          "end": 23.059,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "'yong",
+          "start": 23.059,
+          "end": 23.299,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 23.299,
+          "end": 23.359,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "lihim",
+          "start": 23.359,
+          "end": 24.199,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 24.199,
+          "end": 24.279,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "na",
+          "start": 24.279,
+          "end": 24.579,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 24.579,
+          "end": 24.579,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "ganda,",
+          "start": 24.579,
+          "end": 25.139,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 25.139,
+          "end": 25.159,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "itangi",
+          "start": 25.159,
+          "end": 25.76,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 25.76,
+          "end": 25.76,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "nila",
+          "start": 25.76,
+          "end": 26.26,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 26.26,
+          "end": 26.279,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "man",
+          "start": 26.279,
+          "end": 26.52,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 26.52,
+          "end": 26.599,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "yan,",
+          "start": 26.599,
+          "end": 26.8,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 26.8,
+          "end": 26.819,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "imposible.",
+          "start": 26.819,
+          "end": 28.199,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 28.199,
+          "end": 28.279,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "Gaya",
+          "start": 28.279,
+          "end": 28.7,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 28.7,
+          "end": 28.739,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "ng",
+          "start": 28.739,
+          "end": 28.999,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 28.999,
+          "end": 29.039,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "pinaniniwalaan,",
+          "start": 29.039,
+          "end": 30.68,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 30.68,
+          "end": 30.699,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "kalokohan",
+          "start": 30.699,
+          "end": 31.7,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 31.7,
+          "end": 31.719,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "lang",
+          "start": 31.719,
+          "end": 31.979,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 31.979,
+          "end": 32.04,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "na",
+          "start": 32.04,
+          "end": 32.18,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 32.18,
+          "end": 32.219,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "ang",
+          "start": 32.219,
+          "end": 32.479,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 32.479,
+          "end": 32.5,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "lahat",
+          "start": 32.5,
+          "end": 32.959,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 32.959,
+          "end": 33.02,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "wala",
+          "start": 33.02,
+          "end": 33.52,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 33.52,
+          "end": 33.52,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "rin.",
+          "start": 33.52,
+          "end": 34.039,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 34.039,
+          "end": 34.2,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "At",
+          "start": 34.2,
+          "end": 34.5,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 34.5,
+          "end": 34.5,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "ayoko",
+          "start": 34.5,
+          "end": 35.079,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 35.079,
+          "end": 35.079,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "sanang",
+          "start": 35.079,
+          "end": 35.639,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 35.639,
+          "end": 35.659,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "makawala",
+          "start": 35.659,
+          "end": 36.619,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 36.619,
+          "end": 36.659,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "ka",
+          "start": 36.659,
+          "end": 36.839,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 36.839,
+          "end": 36.899,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "pa",
+          "start": 36.899,
+          "end": 37.079,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 37.079,
+          "end": 37.079,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "sakin.",
+          "start": 37.079,
+          "end": 37.94,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 37.94,
+          "end": 38.079,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "Kanyang",
+          "start": 38.079,
+          "end": 38.619,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 38.619,
+          "end": 38.639,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "oo",
+          "start": 38.639,
+          "end": 39.039,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 39.039,
+          "end": 39.04,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "lamang",
+          "start": 39.04,
+          "end": 39.639,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 39.639,
+          "end": 39.639,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "ang",
+          "start": 39.639,
+          "end": 39.819,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 39.819,
+          "end": 39.86,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "kailangan.",
+          "start": 39.86,
+          "end": 40.619,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 40.619,
+          "end": 40.639,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "At",
+          "start": 40.639,
+          "end": 40.799,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 40.799,
+          "end": 40.84,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "pag-amin",
+          "start": 40.84,
+          "end": 41.52,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 41.52,
+          "end": 41.559,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "sapagkat",
+          "start": 41.559,
+          "end": 42.299,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 42.299,
+          "end": 42.319,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "katotohanan",
+          "start": 42.319,
+          "end": 43.479,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 43.479,
+          "end": 43.559,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "ang",
+          "start": 43.559,
+          "end": 43.759,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 43.759,
+          "end": 43.779,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "magpapalayas",
+          "start": 43.779,
+          "end": 45.039,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 45.039,
+          "end": 45.039,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "sa'tin.",
+          "start": 45.039,
+          "end": 45.779,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 45.779,
+          "end": 45.939,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "Para",
+          "start": 45.939,
+          "end": 46.419,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 46.419,
+          "end": 46.439,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "malinawang",
+          "start": 46.439,
+          "end": 47.38,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 47.38,
+          "end": 47.419,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "kathang-isip",
+          "start": 47.419,
+          "end": 48.419,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 48.419,
+          "end": 48.419,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "'to.",
+          "start": 48.419,
+          "end": 48.879,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 48.879,
+          "end": 49.239,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "Tila",
+          "start": 49.239,
+          "end": 49.639,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 49.639,
+          "end": 49.68,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "kahit",
+          "start": 49.68,
+          "end": 50.159,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 50.159,
+          "end": 50.18,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "makabitaw",
+          "start": 50.18,
+          "end": 51.119,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 51.119,
+          "end": 51.119,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "sa",
+          "start": 51.119,
+          "end": 51.239,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 51.239,
+          "end": 51.36,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "panaginip,",
+          "start": 51.36,
+          "end": 52.419,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 52.419,
+          "end": 52.459,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "oh",
+          "start": 52.459,
+          "end": 52.619,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 52.619,
+          "end": 52.659,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "Diyos",
+          "start": 52.659,
+          "end": 53.02,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 53.02,
+          "end": 53.099,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "ko.",
+          "start": 53.099,
+          "end": 53.58,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 53.58,
+          "end": 53.639,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "Paliwalang",
+          "start": 53.639,
+          "end": 54.6,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 54.6,
+          "end": 54.619,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "ikaw",
+          "start": 54.619,
+          "end": 55.059,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 55.059,
+          "end": 55.079,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "nga",
+          "start": 55.079,
+          "end": 55.299,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 55.299,
+          "end": 55.299,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "raw",
+          "start": 55.299,
+          "end": 55.599,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 55.599,
+          "end": 55.619,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "ay",
+          "start": 55.619,
+          "end": 55.76,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 55.76,
+          "end": 55.779,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "hindi",
+          "start": 55.779,
+          "end": 56.239,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 56.239,
+          "end": 56.279,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "totoo.",
+          "start": 56.279,
+          "end": 57.079,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 57.079,
+          "end": 57.099,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "Isang",
+          "start": 57.099,
+          "end": 57.539,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 57.539,
+          "end": 57.559,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "balyo",
+          "start": 57.559,
+          "end": 58.039,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 58.039,
+          "end": 58.059,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "na",
+          "start": 58.059,
+          "end": 58.239,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 58.239,
+          "end": 58.239,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "naligaw",
+          "start": 58.239,
+          "end": 59.019,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 59.019,
+          "end": 59.079,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "sa",
+          "start": 59.079,
+          "end": 59.22,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 59.22,
+          "end": 59.239,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "may",
+          "start": 59.239,
+          "end": 59.519,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 59.519,
+          "end": 59.539,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "sarili",
+          "start": 59.539,
+          "end": 60.219,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 60.219,
+          "end": 60.219,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "kong",
+          "start": 60.219,
+          "end": 60.5,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 60.5,
+          "end": 60.539,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "mundo.",
+          "start": 60.539,
+          "end": 61.039,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 61.039,
+          "end": 61.039,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "Kaya",
+          "start": 61.039,
+          "end": 61.42,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 61.42,
+          "end": 61.5,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "tanong",
+          "start": 61.5,
+          "end": 61.979,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 61.979,
+          "end": 62.0,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "ko",
+          "start": 62.0,
+          "end": 62.159,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": " ",
+          "start": 62.159,
+          "end": 62.219,
+          "type": "spacing",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        },
+        {
+          "text": "ay--",
+          "start": 62.219,
+          "end": 62.719,
+          "type": "word",
+          "speaker_id": "Speaker 0",
+          "characters": null
+        }
+      ]
+    }
+  ]
+}

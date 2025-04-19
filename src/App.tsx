@@ -8,9 +8,32 @@ import { FPS } from "./constants";
 import TextEditor from "./TextEditor";
 import LyricsEditor from "./LyricsEditor";
 import useEditor from "./state/use-editor";
+import { load } from "./speech-to-text-loaders";
 
 function App() {
-  const { wordsWithTimestamps } = useEditor();
+  const { wordsWithTimestamps, setWordsWithTimestamps } = useEditor();
+
+  useEffect(() => {
+    const loadJSON = async () => {
+      const response = await fetch("/ell.json");
+      const data = await response.json();
+
+      return data;
+    };
+
+    const loadData = async () => {
+      const data = await loadJSON();
+      const wordsWithTimestamps = load({
+        source: "elevenlabs",
+        content: data,
+      });
+
+      setWordsWithTimestamps(wordsWithTimestamps);
+    };
+
+    loadData();
+  }, [setWordsWithTimestamps]);
+
   const timelineTexts = wordsWithTimestamps.map((word) => {
     return {
       text: word.word,
@@ -35,6 +58,13 @@ function App() {
       },
       [[]]
     );
+
+    if (highlightedVerses[highlightedVerses.length - 1].length === 0) {
+      setTracks([]);
+
+      return;
+    }
+
     const trackItems = highlightedVerses.map((chunk, index) => ({
       id: `highlightedVerses-${index + 1}`,
       type: "highlightedVerses",
@@ -54,7 +84,7 @@ function App() {
         items: [
           {
             type: "audio",
-            src: "http://localhost:5173/test.mp3",
+            src: "/imahinasyon.mp3",
           } as Item,
         ],
       },
@@ -66,10 +96,8 @@ function App() {
       tracks,
     };
   }, [tracks]);
-
   const playerRef = useRef<PlayerRef>(null);
-
-  const combinedWords = useMemo(() => {
+  const lyrics = useMemo(() => {
     return wordsWithTimestamps
       .map((word, index) => {
         const nextWord = wordsWithTimestamps[index + 1]?.word;
@@ -88,11 +116,14 @@ function App() {
       .join("");
   }, [wordsWithTimestamps]);
 
+  // const totalDuration = 148; // This should be derived from the actual length of the audio.
+  const totalDuration = 63; // This should be derived from the actual length of the audio.
+
   return (
     <div className="container p-4 mx-auto">
       <div className="grid grid-cols-3 gap-4">
         <div className="flex flex-col">
-          <LyricsEditor lyrics={combinedWords} />
+          <LyricsEditor lyrics={lyrics} />
         </div>
         <div className="flex flex-row items-center justify-center">
           <Player
@@ -102,7 +133,7 @@ function App() {
             component={Main}
             fps={30}
             inputProps={inputProps}
-            durationInFrames={148 * FPS}
+            durationInFrames={totalDuration * FPS}
             compositionWidth={1920}
             compositionHeight={1080}
             controls
@@ -115,7 +146,11 @@ function App() {
         </div>
       </div>
       <div className="flex flex-col gap-4 mt-4">
-        <Timeline playerRef={playerRef} lyrics={timelineTexts} />
+        <Timeline
+          playerRef={playerRef}
+          lyrics={timelineTexts}
+          totalDuration={totalDuration}
+        />
       </div>
     </div>
   );

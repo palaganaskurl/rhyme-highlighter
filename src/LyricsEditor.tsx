@@ -18,7 +18,7 @@ const LyricsEditor: React.FC<LyricsEditorProps> = ({ lyrics }) => {
   } = useEditor();
 
   useEffect(() => {
-    const handleSelectionChange = (e: Event) => {
+    const handleSelectionChange = () => {
       const selection = window.getSelection();
 
       if (!selection || selection.isCollapsed) return;

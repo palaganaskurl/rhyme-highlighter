@@ -26,7 +26,7 @@ const TimelineTextComponent: React.FC<TimelineTextComponentProps> = ({
   const handleMouseDown = () => {
     setToDrag(true);
   };
-  const handleStop = (e: RndDragEvent, d: DraggableData) => {
+  const handleStop = (_e: RndDragEvent, _d: DraggableData) => {
     setToDrag(false);
   };
   const initialWidth =
@@ -40,7 +40,7 @@ const TimelineTextComponent: React.FC<TimelineTextComponentProps> = ({
     x: (item.from / FPS / totalDuration) * timelineWidth, // Let's divide by FPS to get the time in seconds
     y: trackNumber * TRACK_HEIGHT,
   });
-  const handleDrag = (e: RndDragEvent, d: DraggableData) => {
+  const handleDrag = (_e: RndDragEvent, d: DraggableData) => {
     setPosition({
       x: d.x,
       y: d.y,
@@ -63,7 +63,7 @@ const TimelineTextComponent: React.FC<TimelineTextComponentProps> = ({
       )}
       onMouseDown={handleMouseDown}
       onDragStop={handleStop}
-      onResizeStop={(e, direction, ref, delta, position) => {
+      onResizeStop={(_e, _direction, ref, _delta, _position) => {
         setSize({
           width: parseFloat(ref.style.width),
           height: parseFloat(ref.style.height),

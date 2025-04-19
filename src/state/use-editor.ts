@@ -1,7 +1,5 @@
 import { create } from "zustand";
 import { Item, WordsWithTimestamps } from "../types";
-import { filteredWordDataRaw } from "../data";
-import { FPS } from "../constants";
 
 interface EditorState {
   currentEditedItem: Item | null;
@@ -19,15 +17,7 @@ const useEditor = create<EditorState>((set) => ({
   setCurrentEditedItem: (item) => set(() => ({ currentEditedItem: item })),
 
   // TODO: Replace this with the user input
-  wordsWithTimestamps: filteredWordDataRaw
-    .map((word) => {
-      return {
-        word: word.value,
-        timestamp: word.ts * FPS, // Assuming each word is 30 frames long
-        durationInFrames: (word.end_ts - word.ts) * FPS,
-      };
-    })
-    .slice(0, 500),
+  wordsWithTimestamps: [],
   setWordsWithTimestamps: (words) =>
     set(() => ({ wordsWithTimestamps: words })),
 
