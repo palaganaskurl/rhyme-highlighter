@@ -51,9 +51,10 @@ export default function Timeline({
     if (!timelineRef.current || !playerRef.current) return;
 
     const rect = timelineRef.current.getBoundingClientRect();
-    const clickX = e.clientX - rect.left; // Get the click position relative to the timeline
-    const newTime = (clickX / timelineWidth) * totalDuration; // Calculate the new time in seconds
-    const newFrame = Math.round(newTime * FPS); // Convert time to frames
+    const scrollLeft = timelineRef.current.scrollLeft;
+    const clickX = e.clientX - rect.left + scrollLeft;
+    const newTime = (clickX / timelineWidth) * totalDuration;
+    const newFrame = Math.round(newTime * FPS);
 
     // Update the player's current frame
     playerRef.current.seekTo(newFrame);
