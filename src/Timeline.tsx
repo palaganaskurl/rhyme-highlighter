@@ -1,10 +1,9 @@
 import { FPS } from "./constants";
-import { RemotionTrack } from "./types";
+import { TimelineText } from "./types";
 import { PlayerRef } from "@remotion/player";
 import { useCurrentPlayerFrame } from "./hooks/use-current-player-frame";
 import { useRef } from "react";
 import TimelineTextComponent from "./TimelineTextComponent";
-import { nanoid } from "nanoid";
 import TimelineMarker from "./TimelineMarker";
 import TimelineAudioComponent from "./TimelineAudioComponent";
 
@@ -24,17 +23,17 @@ function generateTimeSequence(interval: number, count: number): string[] {
 }
 
 interface TimelineProps {
-  tracks: RemotionTrack[];
   playerRef: React.RefObject<PlayerRef | null>;
+  lyrics: TimelineText[];
 }
 
-export default function Timeline({ tracks, playerRef }: TimelineProps) {
+export default function Timeline({ playerRef, lyrics }: TimelineProps) {
   const totalDuration = 148; // This should be derived from the actual length of the audio.
   const timeLabelWidth = 100;
 
   const interval = 1000; // 1 second
   const trackCount = 2;
-  const timeLabels = generateTimeSequence(interval, totalDuration); // 60 seconds
+  const timeLabels = generateTimeSequence(interval, totalDuration);
 
   const frame = useCurrentPlayerFrame(playerRef);
 
@@ -46,9 +45,9 @@ export default function Timeline({ tracks, playerRef }: TimelineProps) {
   const markerPosition = (currentTime / totalDuration) * timelineWidth;
 
   return (
-    <div className="flex flex-row h-[200px] max-w-dvw">
+    <div className="flex flex-row max-w-dvw h-[120px]">
       <div className="border border-r-0 w-1/4">
-        <div className="h-[30px] border-b">{frame}</div>
+        <div className="h-[30px] border-b"></div>
         {Array.from({ length: trackCount }, (_, i) => (
           <div
             key={i}
@@ -80,35 +79,21 @@ export default function Timeline({ tracks, playerRef }: TimelineProps) {
             maxWidth: timelineWidth,
           }}
         >
-          {tracks[0].items.map((item) => {
-            if (item.type === "text") {
-              return (
-                <TimelineTextComponent
-                  item={item}
-                  key={nanoid()}
-                  timelineWidth={timelineWidth}
-                  totalDuration={totalDuration}
-                  trackNumber={0} // TODO: Update this
-                />
-              );
-            }
-
-            return null;
+          {lyrics.map((item, i) => {
+            return (
+              <TimelineTextComponent
+                item={item}
+                key={`timeline-text-${i}`}
+                timelineWidth={timelineWidth}
+                totalDuration={totalDuration}
+                trackNumber={0}
+              />
+            );
           })}
-          {/* TODO: It's okay for this to have only one component */}
-          {tracks[1].items.map((item) => {
-            if (item.type === "audio") {
-              return (
-                <TimelineAudioComponent
-                  key={nanoid()}
-                  timelineWidth={timelineWidth}
-                  trackNumber={1} // TODO: Update this
-                />
-              );
-            }
-
-            return null;
-          })}
+          <TimelineAudioComponent
+            timelineWidth={timelineWidth}
+            trackNumber={1}
+          />
         </div>
         <TimelineMarker markerPosition={markerPosition} />
       </div>

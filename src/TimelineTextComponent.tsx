@@ -3,10 +3,10 @@ import { twMerge } from "tailwind-merge";
 import { Rnd, RndDragEvent, DraggableData } from "react-rnd";
 import { FPS } from "./constants";
 import useEditor from "./state/use-editor";
-import { TextItem } from "./types";
+import { TextItem, TimelineText } from "./types";
 
 interface TimelineTextComponentProps {
-  item: TextItem;
+  item: TimelineText;
   timelineWidth: number;
   totalDuration: number;
   trackNumber: number;
@@ -77,7 +77,7 @@ const TimelineTextComponent: React.FC<TimelineTextComponentProps> = ({
       }}
       onDrag={handleDrag}
       onClick={() => {
-        setCurrentEditedItem(item);
+        setCurrentEditedItem(item as TextItem);
       }}
     >
       {item.text}

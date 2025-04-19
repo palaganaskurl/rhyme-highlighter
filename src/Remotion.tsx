@@ -1,71 +1,99 @@
-import {
-  AbsoluteFill,
-  OffthreadVideo,
-  Sequence,
-  Audio,
-  useCurrentFrame,
-} from "remotion";
+import { AbsoluteFill, Sequence, Audio, useCurrentFrame } from "remotion";
 import { Item, RemotionTrack } from "./types";
-import { nanoid } from "nanoid";
+import useEditor from "./state/use-editor";
 
 interface HighlightedTextProps {
-  wordsWithTimestamps: { word: string; timestamp: number }[]; // Array of objects with word and timestamp
+  wordsWithTimestamps: { word: string; timestamp: number }[];
+  absoluteFrame: number;
 }
 
 export const HighlightedVerses: React.FC<HighlightedTextProps> = ({
   wordsWithTimestamps,
+  absoluteFrame,
 }) => {
-  const frame = useCurrentFrame();
-
   const wordOccurrences: Record<string, number> = {};
+  const { wordToHighlightMap } = useEditor();
+
+  const lines: { word: string; timestamp: number }[][] = [];
+  let currentLine: { word: string; timestamp: number }[] = [];
+
+  wordsWithTimestamps.forEach((entry) => {
+    if (entry.word === "\n") {
+      lines.push(currentLine);
+      currentLine = [];
+    } else {
+      currentLine.push(entry);
+    }
+  });
+
+  if (currentLine.length > 0) {
+    lines.push(currentLine);
+  }
 
   return (
     <AbsoluteFill
       style={{
         display: "flex",
-        flexDirection: "row", // Stack lines vertically
-        alignItems: "center",
-        justifyContent: "center",
+        flexDirection: "column",
+        alignItems: "flex-start",
         fontSize: "48px",
         fontWeight: "bold",
-        // textAlign: "center",
-        padding: "1em", // Add padding to prevent text from touching edges
-        boxSizing: "border-box", // Ensure padding is included in the size
-        flexWrap: "wrap", // Allow words to wrap to the next line
+        padding: "1em",
+        boxSizing: "border-box",
+        lineHeight: "1.5",
       }}
     >
-      {wordsWithTimestamps.map(({ word, timestamp }, index) => {
-        // Track the occurrence of the word
-        const occurrence = wordOccurrences[word] || 0;
+      {lines.map((line, lineIndex) => (
+        <div
+          key={lineIndex}
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+          }}
+        >
+          {line.map(({ word, timestamp }, wordIndex) => {
+            const occurrence = wordOccurrences[word] || 0;
+            wordOccurrences[word] = occurrence + 1;
 
-        // Increment the occurrence count for the next word
-        wordOccurrences[word] = occurrence + 1;
+            const isHighlighted = absoluteFrame >= timestamp;
+            const toHighlight = wordToHighlightMap[word];
 
-        // Highlight logic for each word
-        const isHighlighted = frame >= timestamp; // Highlight persists after the timestamp
-
-        return (
-          <span
-            key={index}
-            style={{
-              backgroundColor: isHighlighted ? "yellow" : "transparent", // Highlight active and past words
-              padding: "0.2em",
-              borderRadius: "0.2em",
-            }}
-          >
-            {word}
-          </span>
-        );
-      })}
+            return (
+              <span
+                key={wordIndex}
+                style={{
+                  backgroundColor: isHighlighted
+                    ? toHighlight
+                      ? toHighlight
+                      : "transparent"
+                    : "transparent",
+                  padding: "0.2em",
+                  borderRadius: "0.2em",
+                  marginRight: "0.2em", // Add spacing between words
+                }}
+              >
+                {word}
+              </span>
+            );
+          })}
+        </div>
+      ))}
     </AbsoluteFill>
   );
 };
 
 export const ItemComp: React.FC<{
   item: Item;
-}> = ({ item }) => {
+  frame: number;
+}> = ({ item, frame }) => {
   if (item.type === "highlightedVerses") {
-    return <HighlightedVerses wordsWithTimestamps={item.wordsWithTimestamps} />;
+    return (
+      <HighlightedVerses
+        wordsWithTimestamps={item.wordsWithTimestamps}
+        absoluteFrame={frame}
+      />
+    );
   }
 
   if (item.type === "audio") {
@@ -75,41 +103,13 @@ export const ItemComp: React.FC<{
       </AbsoluteFill>
     );
   }
-
-  //   if (item.type === "solid") {
-  //     return <AbsoluteFill style={{ backgroundColor: item.color }} />;
-  //   }
-
-  //   if (item.type === "text") {
-  //     return (
-  //       <AbsoluteFill
-  //         style={{
-  //           display: "flex",
-  //           alignItems: "center",
-  //           justifyContent: "center",
-  //         }}
-  //       >
-  //         <h1
-  //           style={{
-  //             backgroundColor: "yellow",
-  //           }}
-  //         >
-  //           {item.text}
-  //         </h1>
-  //       </AbsoluteFill>
-  //     );
-  //   }
-
-  if (item.type === "video") {
-    return <OffthreadVideo src={item.src} />;
-  }
-
-  //   throw new Error(`Unknown item type: ${JSON.stringify(item)}`);
 };
 
 const Track: React.FC<{
   track: RemotionTrack;
 }> = ({ track }) => {
+  const frame = useCurrentFrame();
+
   return (
     <AbsoluteFill>
       {track.items.map((item) => {
@@ -119,7 +119,7 @@ const Track: React.FC<{
             from={item.from}
             durationInFrames={item.durationInFrames}
           >
-            <ItemComp item={item} />
+            <ItemComp item={item} frame={frame} />
           </Sequence>
         );
       })}
@@ -133,8 +133,6 @@ export const Main: React.FC<{
   return (
     <AbsoluteFill>
       {tracks.map((track) => {
-        console.log(track);
-
         return <Track track={track} key={track.name} />;
       })}
     </AbsoluteFill>

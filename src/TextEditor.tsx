@@ -6,8 +6,6 @@ interface TextEditorProps {}
 const TextEditor: React.FC<TextEditorProps> = () => {
   const { currentEditedItem } = useEditor();
 
-  console.log(currentEditedItem);
-
   if (currentEditedItem?.type !== "text") {
     return null;
   }

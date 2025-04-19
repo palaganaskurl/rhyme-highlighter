@@ -47,3 +47,9 @@ export type RemotionTrack = {
   name: string;
   items: Item[];
 };
+
+export type TimelineText = {
+  text: string;
+  durationInFrames: number;
+  from: number;
+};
