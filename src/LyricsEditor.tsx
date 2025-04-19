@@ -59,14 +59,22 @@ const LyricsEditor: React.FC<LyricsEditorProps> = ({ lyrics }) => {
 
     wordToHighlightMap[selectedText] = color;
 
+    console.log("selectedText", selectedText);
+
     setWordToHighlightMap({ ...wordToHighlightMap });
   };
 
   const availableColors = [
-    "oklch(63.7% 0.237 25.331)",
-    "oklch(70.5% 0.213 47.604)",
-    "oklch(76.9% 0.188 70.08)",
-    "oklch(79.5% 0.184 86.047)",
+    "oklch(0.82 0.15 25)", // Strong Pink
+    "oklch(0.84 0.17 75)", // Vibrant Peach
+    "oklch(0.83 0.12 145)", // Fresh Mint
+    "oklch(0.83 0.13 250)", // Bright Sky Blue
+    "oklch(0.81 0.14 310)", // Rich Lavender
+    "oklch(0.82 0.16 40)", // Warm Coral
+    "oklch(0.85 0.18 115)", // Zesty Lime
+    "oklch(0.86 0.13 220)", // Ocean Blue
+    "oklch(0.87 0.19 100)", // Bold Lemon
+    "oklch(0.80 0.08 230)", // Cool Gray-Blue
   ];
 
   const handleInsertNewLine = (newLine: string) => {
@@ -114,19 +122,19 @@ const LyricsEditor: React.FC<LyricsEditorProps> = ({ lyrics }) => {
       <div className="flex justify-center">
         Group Lyrics and Highlight Rhymes
       </div>
-      <div className="flex flex-row justify-center gap-4">
+      <div className="flex flex-row justify-center items-center gap-2 flex-nowrap">
         {availableColors.map((color, index) => {
           return (
-            <button
+            <div
               key={`color-${index}`}
-              className="rounded-full size-[20px]"
+              className="rounded-full size-6 border shrink-0"
               style={{
                 backgroundColor: color,
               }}
               onClick={() => {
                 applyHighlight(color);
               }}
-            ></button>
+            ></div>
           );
         })}
       </div>

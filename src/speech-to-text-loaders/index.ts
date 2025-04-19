@@ -66,6 +66,9 @@ export const loadElevenLabs = (content: {
           return word.type === "word";
         })
         .map((word) => {
+          // Replace .
+          word.text = word.text.replace(".", "");
+
           return {
             word: word.text,
             timestamp: word.start * FPS,
