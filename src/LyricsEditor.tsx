@@ -59,8 +59,6 @@ const LyricsEditor: React.FC<LyricsEditorProps> = ({ lyrics }) => {
 
     wordToHighlightMap[selectedText] = color;
 
-    console.log("selectedText", selectedText);
-
     setWordToHighlightMap({ ...wordToHighlightMap });
   };
 
@@ -77,26 +75,62 @@ const LyricsEditor: React.FC<LyricsEditorProps> = ({ lyrics }) => {
     "oklch(0.80 0.08 230)", // Cool Gray-Blue
   ];
 
-  const handleInsertNewLine = (newLine: string) => {
+  const findWordIndexFromCursor = (
+    containerRef: React.RefObject<HTMLDivElement | null>,
+    wordsWithTimestamps: Array<{
+      word: string;
+      timestamp: number;
+      durationInFrames: number;
+    }>
+  ): number => {
     const selection = window.getSelection();
-    if (!selection || !containerRef.current) return;
+    if (!selection || !containerRef.current) return -1;
 
     const range = selection.getRangeAt(0);
-    const cursorPosition = range.startOffset;
+    const preCaretRange = range.cloneRange();
+    preCaretRange.selectNodeContents(containerRef.current);
+    preCaretRange.setEnd(range.endContainer, range.endOffset);
+    const textBeforeCursor = preCaretRange.toString();
 
-    let charCount = 0;
-    let wordIndex = -1;
+    let targetLength = textBeforeCursor.length;
+    let currentLength = 0;
+
+    console.log("Target length:", targetLength);
 
     for (let i = 0; i < wordsWithTimestamps.length; i++) {
       const word = wordsWithTimestamps[i].word;
-      // Only add space if it's not a newline
-      charCount += word.length + (word === "\n" ? 0 : 1);
+      const isNewline = word === "\n" || word === "\n\n\n";
 
-      if (cursorPosition <= charCount) {
-        wordIndex = i;
-        break;
+      // Add word length
+      currentLength += word.length;
+
+      // Only add space if:
+      // 1. Current word is not a newline
+      // 2. Not the last word
+      // 3. Next word is not a newline
+      if (
+        !isNewline &&
+        i < wordsWithTimestamps.length - 1 &&
+        wordsWithTimestamps[i + 1].word !== "\n" &&
+        wordsWithTimestamps[i + 1].word !== "\n\n\n"
+      ) {
+        currentLength += 1;
+      }
+
+      // Return current index if we've reached or exceeded the target length
+      if (currentLength >= targetLength) {
+        return i;
       }
     }
+
+    return wordsWithTimestamps.length - 1;
+  };
+
+  const handleInsertNewLine = (newLine: string) => {
+    const wordIndex = findWordIndexFromCursor(
+      containerRef,
+      wordsWithTimestamps
+    );
 
     if (wordIndex !== -1) {
       const updatedWords = [
@@ -160,7 +194,6 @@ const LyricsEditor: React.FC<LyricsEditorProps> = ({ lyrics }) => {
         onKeyDown={handleKeyDown}
         style={{
           minHeight: "200px",
-          whiteSpace: "pre-wrap",
         }}
         suppressContentEditableWarning
       >

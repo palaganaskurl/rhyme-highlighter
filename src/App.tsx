@@ -86,7 +86,7 @@ function App() {
           {
             id: "audio-1",
             type: "audio",
-            src: "http://localhost:5173/imahinasyon.mp3",
+            src: `${window.location.protocol}//${window.location.host}/imahinasyon.mp3`,
           } as Item,
         ],
       },
