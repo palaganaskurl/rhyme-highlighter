@@ -10,8 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@remotion/bundler": "4.0.287",
     "@remotion/cli": "4.0.287",
+    "@remotion/google-fonts": "^4.0.287",
     "@remotion/player": "4.0.287",
+    "@remotion/renderer": "4.0.287",
     "@tailwindcss/vite": "^4.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

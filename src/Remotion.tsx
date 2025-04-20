@@ -1,18 +1,21 @@
 import { AbsoluteFill, Sequence, Audio, useCurrentFrame } from "remotion";
 import { Item, RemotionTrack } from "./types";
-import useEditor from "./state/use-editor";
+import { loadFont } from "@remotion/google-fonts/Poppins";
+
+const { fontFamily } = loadFont();
 
 interface HighlightedTextProps {
   wordsWithTimestamps: { word: string; timestamp: number }[];
   absoluteFrame: number;
+  wordToHighlightMap: Record<string, string>;
 }
 
 export const HighlightedVerses: React.FC<HighlightedTextProps> = ({
   wordsWithTimestamps,
   absoluteFrame,
+  wordToHighlightMap,
 }) => {
   const wordOccurrences: Record<string, number> = {};
-  const { wordToHighlightMap } = useEditor();
 
   const lines: { word: string; timestamp: number }[][] = [];
   let currentLine: { word: string; timestamp: number }[] = [];
@@ -86,12 +89,14 @@ export const HighlightedVerses: React.FC<HighlightedTextProps> = ({
 export const ItemComp: React.FC<{
   item: Item;
   frame: number;
-}> = ({ item, frame }) => {
+  wordToHighlightMap: Record<string, string>;
+}> = ({ item, frame, wordToHighlightMap }) => {
   if (item.type === "highlightedVerses") {
     return (
       <HighlightedVerses
         wordsWithTimestamps={item.wordsWithTimestamps}
         absoluteFrame={frame}
+        wordToHighlightMap={wordToHighlightMap}
       />
     );
   }
@@ -107,7 +112,8 @@ export const ItemComp: React.FC<{
 
 const Track: React.FC<{
   track: RemotionTrack;
-}> = ({ track }) => {
+  wordToHighlightMap: Record<string, string>;
+}> = ({ track, wordToHighlightMap }) => {
   const frame = useCurrentFrame();
 
   return (
@@ -119,7 +125,11 @@ const Track: React.FC<{
             from={item.from}
             durationInFrames={item.durationInFrames}
           >
-            <ItemComp item={item} frame={frame} />
+            <ItemComp
+              item={item}
+              frame={frame}
+              wordToHighlightMap={wordToHighlightMap}
+            />
           </Sequence>
         );
       })}
@@ -129,11 +139,20 @@ const Track: React.FC<{
 
 export const Main: React.FC<{
   tracks: RemotionTrack[];
-}> = ({ tracks }) => {
+  wordToHighlightMap: Record<string, string>;
+}> = ({ tracks, wordToHighlightMap }) => {
+  // TODO: wordToHighlightMap, update handling
+
   return (
-    <AbsoluteFill>
+    <AbsoluteFill style={{ backgroundColor: "white", fontFamily }}>
       {tracks.map((track) => {
-        return <Track track={track} key={track.name} />;
+        return (
+          <Track
+            track={track}
+            key={track.name}
+            wordToHighlightMap={wordToHighlightMap}
+          />
+        );
       })}
     </AbsoluteFill>
   );

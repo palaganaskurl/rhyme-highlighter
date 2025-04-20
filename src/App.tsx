@@ -11,7 +11,8 @@ import useEditor from "./state/use-editor";
 import { load } from "./speech-to-text-loaders";
 
 function App() {
-  const { wordsWithTimestamps, setWordsWithTimestamps } = useEditor();
+  const { wordsWithTimestamps, setWordsWithTimestamps, wordToHighlightMap } =
+    useEditor();
 
   useEffect(() => {
     const loadJSON = async () => {
@@ -83,8 +84,9 @@ function App() {
         name: "Track 2",
         items: [
           {
+            id: "audio-1",
             type: "audio",
-            src: "/imahinasyon.mp3",
+            src: "http://localhost:5173/imahinasyon.mp3",
           } as Item,
         ],
       },
@@ -94,8 +96,9 @@ function App() {
   const inputProps = useMemo(() => {
     return {
       tracks,
+      wordToHighlightMap,
     };
-  }, [tracks]);
+  }, [tracks, wordToHighlightMap]);
   const playerRef = useRef<PlayerRef>(null);
   const lyrics = useMemo(() => {
     return wordsWithTimestamps
@@ -118,6 +121,29 @@ function App() {
 
   // const totalDuration = 148; // This should be derived from the actual length of the audio.
   const totalDuration = 63; // This should be derived from the actual length of the audio.
+
+  const [showToast, setShowToast] = useState(false);
+  const [isRendering, setIsRendering] = useState(false);
+
+  const renderVideo = async () => {
+    setIsRendering(true);
+    await fetch("http://localhost:3000/render", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        tracks,
+        wordToHighlightMap,
+        totalDuration,
+      }),
+    });
+    setShowToast(true);
+    setIsRendering(false);
+    setTimeout(() => {
+      setShowToast(false);
+    }, 3000);
+  };
 
   return (
     <div className="container p-4 mx-auto">
@@ -142,6 +168,16 @@ function App() {
           />
         </div>
         <div>
+          <div className="flex justify-end">
+            <button
+              className="btn btn-primary"
+              onClick={renderVideo}
+              disabled={isRendering}
+            >
+              {isRendering && <span className="loading loading-spinner"></span>}
+              Render Video
+            </button>
+          </div>
           <TextEditor />
         </div>
       </div>
@@ -152,6 +188,13 @@ function App() {
           totalDuration={totalDuration}
         />
       </div>
+      {showToast && (
+        <div className="toast toast-top toast-end">
+          <div className="alert alert-success">
+            <span>Successfully Rendered Video</span>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -17,7 +17,7 @@ const TimelineAudioComponent: React.FC<TimelineAudioComponentProps> = ({
         width: timelineWidth,
       }}
     >
-      Filename should be here!
+      Audio filename should be here!
     </div>
   );
 };

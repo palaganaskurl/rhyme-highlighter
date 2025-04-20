@@ -66,8 +66,10 @@ export const loadElevenLabs = (content: {
           return word.type === "word";
         })
         .map((word) => {
-          // Replace .
+          // Temporary handling of punctuations because of highlighting issues
+          // Replace . and ,
           word.text = word.text.replace(".", "");
+          word.text = word.text.replace(",", "");
 
           return {
             word: word.text,
